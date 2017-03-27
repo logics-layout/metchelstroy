@@ -1,0 +1,18 @@
+mixin modal()
+    #callback(class="modal fade")
+        .modal-dialog.modal-sm
+            .modal-content
+                .modal-header.modal-padding
+                    .text-center
+                        p.modal-header__title Заказ звонка
+                        p.modal-header__titleSub Наши менеджеры свяжутся с вами в ближайшее время
+                    button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                .modal-body.modal-padding
+                    .text-center
+                        .form-group
+                            input.form-control(placeholder="Введите ваше имя").text-center
+                        .form-group
+                            input.form-control(placeholder="Номер телефона").text-center
+                        br.hidden-sm-down
+                        .text-center: button.btn.btn-orange.btn-input Отправить звонок
+
