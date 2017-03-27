@@ -30,15 +30,13 @@ th {
     > tr {
       > th,
       > td {
-        //@include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
-        //  padding: 13px 15px;
-        //}
-        //@include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
-        //  padding: 5px 9px;
-        //}
-        padding: 20px 27px;
-        line-height: 24px;
-        vertical-align: middle;
+        @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+          padding: 13px 15px;
+        }
+        @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+          padding: 5px 9px;
+        }
+        padding: 20px 21px;
         +*{
           //border-left: 3px solid #fff;
         }
@@ -47,14 +45,14 @@ th {
   }
   // Bottom align for column headings
   > tbody > tr > td {
-    //@include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
-    //  padding-top: 13px;
-    //  padding-bottom: 13px;
-    //}
-    //@include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
-    //  padding-top: 5px;
-    //  padding-bottom: 5px;
-    //}
+    @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+    @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
     padding-top: 10px;
     padding-bottom: 10px;
     p{
@@ -64,16 +62,9 @@ th {
     }
   }
   > thead > tr > th {
-
-  }
-  > thead > tr > th {
-    //vertical-align: bottom;
-    //font-weight: 700;
-    background-color: #ef9c00;
     font-weight: 400;
+    background-color: #e31948;
     color: white;
-    line-height: 20px;
-    font-size: 16px;
 
     //@include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
     //  font-size: 13px;
@@ -149,8 +140,18 @@ th {
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 .table-striped {
+  > tbody{
+    border: 1px solid $table-border-color;
+    border-top: none;
+  }
+  > thead > tr > th,
   > tbody > tr > td{
-    border-bottom: 1px solid #f0f1f2;
+    +*{
+      border-left: 1px solid #d1d1d1;
+    }
+  }
+  > tbody > tr > td{
+    border-bottom: 1px solid $table-border-color;
     //background-color: #eceef0;
   }
 }

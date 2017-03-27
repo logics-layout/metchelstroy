@@ -1,4 +1,37 @@
 mixin header(data)
+    .header.not-styleLink
+        .header-top
+            .container
+                .header-top__sections
+                    .header-top__sections-section
+                        a(href="#").header__logo: +img('assets/header/logo', 'png')
+                    .header-top__sections-section
+                        a(href="#").header__phone
+                            i.s-phone
+                            span +7 (351) 735-23-72
+                        |&nbsp;&nbsp;&nbsp;
+                        button.btn.btn-green.ttu Заказать звонок
+
+                    .header-top__sections-section
+                        .icon-title-table
+                            .icon-title
+                                .icon-title-el.text-center: i.s-map
+                                .icon-title-title Челябинск, ул. Б.Хмельницкого, 15
+                            a(href="#").icon-title
+                                .icon-title-el.text-center: i.s-mail
+                                .icon-title-title: span metchelstroy@mail.ru
+        .header-bottom
+            .container
+                .header__nav
+                    ul
+                        li: a(href="#").color-white: span.color-white__title О компании
+                        li: a(href="#").color-white: span.color-white__title Пресса
+                        li: a(href="#").color-white: span.color-white__title о нас
+                        li: a(href="#").color-white: span.color-white__title Наши объекты
+                        li: a(href="#").color-white: span.color-white__title Фотогалерея
+                        li: a(href="#").color-white: span.color-white__title Вопрос-ответ
+                        li: a(href="#").color-white: span.color-white__title Контакты
+
 
 
 

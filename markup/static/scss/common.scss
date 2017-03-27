@@ -34,3 +34,24 @@ body {
   //height: 400vh;
   //padding-top: 90px;
 }
+
+.copyright{
+  color: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  display: table;
+  >*{
+    display: table-cell;
+    vertical-align: middle;
+    +*{
+      padding-left: 35px;
+    }
+  }
+  &__icon{
+    >*{
+      margin-top: -7px;
+    }
+  }
+  &__title{}
+}

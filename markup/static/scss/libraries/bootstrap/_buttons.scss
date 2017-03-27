@@ -16,7 +16,7 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   //white-space: nowrap;
-  @include button-size(14px, 28px, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include button-size(11.5px, 30px, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
   //outline: none;
   position: relative;
@@ -24,11 +24,10 @@
 
   color: white;
 
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 500;
 
-  border-radius: 25px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 
   svg{
     display: inline-block;
@@ -44,10 +43,6 @@
     margin-top: -4px;
     margin-left: -4px;
     margin-right: 15px;
-  }
-
-  &-borderBig{
-    border-width: 2px;
   }
 
   &,
@@ -98,18 +93,8 @@ a.btn {
 //.btn-blue{
 //  @include button-variant(#fff, #225faa);
 //}
-.btn-grey{
-  @include button-variant(#fff, #737373);
-}
-.btn-orange{
-  @include button-variant(#212121, $mainColor);
-}
-.btn-white{
-  @include button-variant(#212121, #fff);
-}
-
-.btn-black{
-  @include button-variant(#fff, #000);
+.btn-green{
+  @include button-variant(#fff, #61b112);
 }
 
 // Link buttons

@@ -1,6 +1,31 @@
 mixin footer(data)
     footer.footer.not-styleLink
         .container
+            .footer__nav
+                ul
+                    li: a(href='#').color-cream: span.color-cream__title О компании
+                    li: a(href='#').color-cream: span.color-cream__title Пресса
+                    li: a(href='#').color-cream: span.color-cream__title о нас
+                    li: a(href='#').color-cream: span.color-cream__title Наши объекты
+                    li: a(href='#').color-cream: span.color-cream__title Фотогалерея
+                    li: a(href='#').color-cream: span.color-cream__title Вопрос-ответ
+                    li: a(href='#').color-cream: span.color-cream__title Контакты
+            .row
+                .col-lg-8.col-md-7
+                    p © 2016, Компания «Метчелстрой». Качественные квартиры от застройщика в Челябинске.
+                    a(href="#").color-white: span.color-white__title: b +7 (351) 735-23-72
+                    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    a(href="#").color-cream: span.color-cream__title metchelstroy@mail.ru
+
+                    .hidden-md-up
+                        br
+
+                .col-lg-4.col-md-5
+                    a(href="#").copyright.color-green
+                        span.copyright__icon: i.s-copyright
+                        span.copyright__title: span.color-green__title Разработка сайта —
+                            br
+                            |Интернет-компания «Инсайт»
 
 
 

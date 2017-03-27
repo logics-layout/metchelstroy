@@ -34,7 +34,19 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
-
+  .footer {
+    &__nav {
+      margin-bottom: 30px;
+      ul {
+        li {
+          line-height: normal;
+          a {
+            padding: 10px 18px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
