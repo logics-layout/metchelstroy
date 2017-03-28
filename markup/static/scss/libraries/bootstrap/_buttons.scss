@@ -16,7 +16,7 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   //white-space: nowrap;
-  @include button-size(11.5px, 30px, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include button-size(11.5px, 35px, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
   //outline: none;
   position: relative;
@@ -93,8 +93,11 @@ a.btn {
 //.btn-blue{
 //  @include button-variant(#fff, #225faa);
 //}
-.btn-green{
+.btn-green {
   @include button-variant(#fff, #61b112);
+}
+.btn-cream{
+  @include button-variant(#1b1b1b, #dcc484);
 }
 
 // Link buttons
@@ -136,12 +139,8 @@ a.btn {
   }
 }
 
-
-.btn-border_big{
-  border-width: 2px;
-}
-.btn-ttu{
-  text-transform: uppercase;
+.btn-radius_none{
+ border-radius: 0;
 }
 .btn-width{
   width: 100%;
@@ -153,35 +152,15 @@ a.btn {
 // --------------------------------------------------
 
 .btn-lg {
-  font-size: 16px;
-  font-weight: 700;
-  padding: 24px 60px;
+  font-size: 18px;
+  padding: 17.5px 60px;
   max-width: 100%;
 }
 .btn-input {
-  font-size: 18px;
-  font-weight: 700;
-  padding: 10.5px 32px;
+  font-size: 15px;
+  padding-top: 14.5px;
+  padding-bottom: 14.5px;
   max-width: 100%;
-}
-.btn-filter{
-  font-size: 18px;
-  font-weight: 700;
-  padding: 6.5px 37px;
-  max-width: 100%;
-}
-
-.btn-itemImg{
-  font-size: 18px;
-  font-weight: 700;
-  padding: 6.5px 17px;
-}
-
-.btn-reboot{
-  font-size: 18px;
-  font-weight: 700;
-  padding: 16px 43px;
-  border-radius: 30px;
 }
 
 // Block button

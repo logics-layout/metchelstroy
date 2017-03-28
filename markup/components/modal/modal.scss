@@ -40,50 +40,32 @@
   overflow-y: auto;
 }
 
-.modal__table{
-  display: table;
-  width: 100%;
-  >*{
-    display: table-row;
-    +*{
-      >*{
-        padding-top: 20px;
-      }
-    }
-    >*{
-      display: table-cell;
-      vertical-align: middle;
-      +*{
-        padding-left: 15px;
-      }
-    }
-  }
-}
-
 // Shell div to position the modal with bottom padding
 .modal-dialog {
   position: relative;
-  width: auto;
   margin: 10px;
+  width: 100%;
   .close{
-    @include btn-clear;
+    background-color: #fff;
+    outline: none;
+    border-radius: 50%;
     position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px 15px;
-
+    right: 12px;
+    top: 9px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
     z-index: 9;
-    fill: #fff;
-    //padding-right: 42px;
-
+    border: 2px solid transparent;
+    @include tr;
+    &:hover{
+      border-color: #e31948;
+    }
     i{
-      svg{
-        display: block;
-      }
+      //margin-top: -6px;
     }
   }
 }
-
 
 // Actual modal
 .modal-content {
@@ -93,7 +75,7 @@
   //border: 1px solid $modal-content-border-color;
   //border-radius: $border-radius-large;
   //@include box-shadow(0 3px 9px rgba(0,0,0,.5));
-  //box-shadow: 0 35px 40px rgba(0, 92, 86, 0.15);
+  box-shadow: 0 35px 40px rgba(0, 92, 86, 0.15);
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
@@ -107,28 +89,23 @@
   bottom: 0;
   left: 0;
   z-index: $zindex-modal-background;
-  background-color: #212121;
+  background-color: #000;
   //background-color: $modal-backdrop-bg;
   // Fade for backdrop
   &.fade { @include opacity(0); }
   &.in { @include opacity($modal-backdrop-opacity); }
 }
 
-
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  padding: 30.5px 0;
-  //border-bottom: 1px solid $modal-header-border-color;
-  //background-color: #e6e6e6;
-  //background-image: url('%=static=%assets/header/bg_bottom.jpg');
-  background-color: #ffb33b;
-  position: relative;
+  padding: $modal-title-padding;
+  border-bottom: 1px solid $modal-header-border-color;
   //@include clearfix;
 }
 // Close icon
 .modal-header .close {
-  //margin-top: -2px;
+  margin-top: -2px;
 }
 
 // Title text within header
@@ -136,17 +113,19 @@
   margin: 0;
   //line-height: $modal-title-line-height;
   //text-align: center;
-  font-size: 26px;
-  line-height: 28px;
-  color: #010101;
-  font-weight: 500;
-  //margin-bottom: 0;
+  color: #bfa671;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 100;
 
-  &Sub{
-    color: #010101;
-    font-size: 16px;
-    //font-weight: 300;
-    //text-align: center;
+  margin-bottom: 17px;
+  &.small{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  &-sub{
+    font-weight: 300;
+    text-align: center;
   }
 }
 
@@ -155,6 +134,7 @@
 .modal-body {
   position: relative;
   padding: 40px 20px;
+  padding-top: 40px;
 }
 
 // Footer (for actions)
@@ -188,11 +168,6 @@
   overflow: scroll;
 }
 
-.modal-padding {
-  padding-left: 23px;
-  padding-right: 23px;
-}
-
 // Scale up the modal
 @media (min-width: $screen-sm-min) {
   // Automatically set modal's width for larger viewports
@@ -200,35 +175,17 @@
     width: $modal-md;
     margin: 30px auto;
   }
+  .modal-content {
+    box-shadow: 0 35px 40px rgba(0, 92, 86, 0.15);
+  }
   .modal-title {
-    font-size: 30px;
-    line-height: 40px;
-    &Sub{
-      font-size: 16px;
-    }
+    font-size: 42px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
   }
 
-  .modal-dialog {
-    .close {
-      left: 100%;
-      padding-left: 31px;
-      height: 100%;
-      &:hover{
-        fill: $mainColor;
-      }
-    }
-  }
   .modal-body {
-    padding: 55px 60px;
-  }
-
-  .well-title{
-    font-size: 30px;
-  }
-  .well-titleSub{
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 35px;
+    padding: 70px 121px;
   }
 
   // Modal sizes

@@ -80,7 +80,7 @@ if ($.fn.magnificPopup) {
 
 function initYmaps() {
     var coords = [52.32594308927015, 104.2421168088913];
-    var MapPlaces = new ymaps.Map('yamap', {
+    var MapPlaces = new ymaps.Map('yamap-contacts', {
         center: coords,
         zoom: 12,
         controls: ['zoomControl']
@@ -90,8 +90,8 @@ function initYmaps() {
     collection = new ymaps.GeoObjectCollection(null,{
         iconLayout: 'default#image',
         iconImageHref: 'placemark.png',
-        iconImageSize: [101, 84],
-        iconImageOffset: [-31, -83]
+        iconImageSize: [39, 57],
+        // iconImageOffset: [-31, -83]
     });
 
     MapPlaces.geoObjects.add(collection);
