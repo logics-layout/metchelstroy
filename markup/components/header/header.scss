@@ -29,24 +29,34 @@
       margin-left: 19px;
     }
   }
+  &__phone-mobile{
+    color: inherit;
+    font-weight: 500;
+    font-size: 15px;
+  }
   &-bottom{
     background-color: #e31948;
+    color: #fff;
   }
   &__nav{
-    ul{
-      @include nl;
+    &-blockViewFix{
+      display: none;
+      float: right;
+      padding-top: 5px;
     }
-    >ul{
+    ul{
+      display: inline-block;
+      @include nl;
       font-size: 0;
       margin: 0 -23px;
-      >li{
+      li{
         display: inline-block;
         font-size: 15px;
         font-weight: 400;
         line-height: 52px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        >a{
+        a{
           padding: 0 23px;
           display: block;
         }

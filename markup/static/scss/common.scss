@@ -55,3 +55,29 @@ body {
   }
   &__title{}
 }
+
+.well-two{
+  background-color: #ede8d9;
+  border-radius: 6px;
+  padding: 35px 53px;
+  color: #4a4646;
+  position: relative;
+  &:after{
+    content: '';
+    @include bg($well-two-after);
+    position: absolute;
+    left: -19px;
+    top: 39px;
+  }
+  &__phone{
+    color: black;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 39px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  p{
+    margin-bottom: 15px;
+  }
+}

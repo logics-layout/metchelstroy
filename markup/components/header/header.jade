@@ -1,6 +1,6 @@
 mixin header(data)
     .header.not-styleLink
-        .header-top
+        .header-top.hidden-md-down
             .container
                 .header-top__sections
                     .header-top__sections-section
@@ -22,17 +22,32 @@ mixin header(data)
                                 .icon-title-title: span metchelstroy@mail.ru
         .header-bottom
             .container
-                .header__nav
-                    ul
-                        li: a(href="#").color-white: span.color-white__title О компании
-                        li: a(href="#").color-white: span.color-white__title Пресса
-                        li: a(href="#").color-white: span.color-white__title о нас
-                        li: a(href="#").color-white: span.color-white__title Наши объекты
-                        li: a(href="#").color-white: span.color-white__title Фотогалерея
-                        li: a(href="#").color-white: span.color-white__title Вопрос-ответ
-                        li: a(href="#").color-white: span.color-white__title Контакты
+                .hidden-lg-up
+                    .row
+                        .col-xs-5
+                            .mobile-list-anim.mobile-list-anim_menu
+                                input(type="checkbox", id="header-bottom-toggleMenuMbl").mobile-list-anim__input
+                                label.menuTopMobel(for="header-bottom-toggleMenuMbl")
+                                    span.menu-mobile
+                                        span.menu-mobile-hamburger.one
+                                        span.menu-mobile-hamburger.two
+                                        span.menu-mobile-hamburger.three
+                                    span.menu-text Меню
+                        .col-xs-7.text-right
+                            a(href='tel:+73517352372').header__phone-mobile +7 (351) 735-23-72
 
-
+                .header__nav(data-for="header-bottom-toggleMenuMbl")
+                    .container
+                        ul
+                            li: a(href="#").color-white: span.color-white__title О компании
+                            li: a(href="#").color-white: span.color-white__title Пресса
+                            li: a(href="#").color-white: span.color-white__title о нас
+                            li: a(href="#").color-white: span.color-white__title Наши объекты
+                            li: a(href="#").color-white: span.color-white__title Фотогалерея
+                            li: a(href="#").color-white: span.color-white__title Вопрос-ответ
+                            li: a(href="#").color-white: span.color-white__title Контакты
+                        .header__nav-blockViewFix.hidden-lg-down
+                            button.btn.btn-green.ttu Заказать звонок
 
 
 

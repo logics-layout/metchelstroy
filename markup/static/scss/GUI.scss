@@ -473,14 +473,14 @@ table{
       //margin-top: -4px;
       //margin-right: 20px;
       margin-top: 4px;
-      margin-left: 28px;
+      margin-left: 15px;
       display: inline-block;
       vertical-align: middle;
       pointer-events: none;
       overflow: hidden;
       text-overflow: ellipsis;
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 500;
       line-height: normal;
     }
   }
@@ -533,6 +533,46 @@ table{
   }
 }
 
+.well{
+  background-color: rgba(243, 239, 231, 0.5);
+  padding: 70px 0;
+  &_margin-bottom{
+    margin-bottom: -50px;
+  }
+}
+
+.icon-link{
+  display: table;
+  color: #010101;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  >*{
+    display: table-cell;
+    vertical-align: middle;
+    +*{
+      padding-left: 32px;
+    }
+  }
+  &__icon{
+    i{
+      margin-top: -4px;
+    }
+  }
+  &__title{
+    span{
+
+    }
+  }
+}
+
+.icon-linkList{
+  //margin: -15px 0;
+  .icon-link{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
 
 .list-icon{
   @include nl;
@@ -563,6 +603,9 @@ table{
   color: rgba(191, 166, 113, 1);
   .color-cream-two__title{
     border-bottom: 1px solid transparent;
+    &_viewBorder{
+      border-bottom-color: rgba(191, 166, 113, 0.3);
+    }
   }
   &:hover{
     .color-cream-two__title{
@@ -574,6 +617,9 @@ table{
   color: #e1ba66;
   .color-cream__title{
     border-bottom: 1px solid transparent;
+    &_viewBorder{
+      border-bottom-color: rgba(225, 186, 102, 0.3);
+    }
   }
   &:hover{
     .color-cream__title{
@@ -585,6 +631,9 @@ table{
   color: #fff;
   .color-white__title{
     border-bottom: 1px solid transparent;
+    &_viewBorder{
+      border-bottom-color: rgba(225, 225, 225, 0.3);
+    }
   }
   &:hover{
     .color-white__title{
@@ -596,10 +645,41 @@ table{
   color: rgba(178, 175, 170, 1);
   .color-green__title{
     border-bottom: 1px solid transparent;
+    &_viewBorder{
+      border-bottom-color: rgba(178, 175, 170, 0.3);
+    }
   }
   &:hover{
     .color-green__title{
       border-bottom-color: rgba(178, 175, 170, 0.6);
+    }
+  }
+}
+.color-green-two{
+  color: rgba(93, 90, 89, 1);
+  .color-green__title{
+    border-bottom: 1px solid transparent;
+    &_viewBorder{
+      border-bottom-color: rgba(93, 90, 89, 0.3);
+    }
+  }
+  &:hover{
+    .color-green__title{
+      border-bottom-color: rgba(93, 90, 89, 0.6);
+    }
+  }
+}
+.color-black{
+  color: rgba(1, 1, 1, 1);
+  .color-green__title{
+    border-bottom: 1px solid transparent;
+    &_viewBorder{
+      border-bottom-color: rgba(1, 1, 1, 0.3);
+    }
+  }
+  &:hover{
+    .color-green__title{
+      border-bottom-color: rgba(1, 1, 1, 0.6);
     }
   }
 }

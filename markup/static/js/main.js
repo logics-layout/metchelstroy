@@ -2,11 +2,15 @@ $(document).on('click', '[href="#"]', function(e) {
     return e.preventDefault();
 });
 
+$('table').wrap("<div class='tableWrap'></div>");
+
 $(window).on({
     load: function () {
         checkFooterHeight();
+        fixHeader()
     },
     scroll: function () {
+        fixHeader()
     },
     resize: function () {
         checkFooterHeight();
