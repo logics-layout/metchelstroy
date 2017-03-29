@@ -10,6 +10,10 @@ var data = {
             {
                 img: "assets/item/2",
                 title: "ул. 50-лет ВЛКСМ, 22-А",
+                label: {
+                    title: "дом сдан!",
+                    colorClass: "item__label_green"
+                },
                 price: "от 34 000 руб/м2",
                 desc: "Готовые квартиры с полной отделкой"
             },
@@ -22,6 +26,10 @@ var data = {
             {
                 img: "assets/item/4",
                 title: "ул. Румянцева, 2В",
+                label: {
+                    title: "сдача Скоро!",
+                    colorClass: "item__label_orange"
+                },
                 price: "от 35 236 руб/м2",
                 desc: "Новостройка"
             },

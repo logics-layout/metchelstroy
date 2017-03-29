@@ -410,7 +410,7 @@ table{
         width: 17px;
         height: 17px;
         background-color: transparent;
-        border: 2px solid white;
+        border: 2px solid $mainColor;
         border-radius: 50%;
       }
     }
@@ -521,25 +521,18 @@ table{
 
 .slick-arrow{
   @include btn-clear;
-  width: 43px;
-  height: 43px;
-  line-height: 55px;
-  background-color: #c1c1c1;
-  fill: #fff;
+  width: 87px;
+  height: 87px;
+  line-height: 87px;
+  background-color: $mainColor;
   border-radius: 50%;
   @include tr;
-  svg{
-    display: block;
-  }
   &:hover{
-    background-color: #ffb33b;
-    fill: #000;
+    background-color: darken($mainColor, 10%);
   }
   &.slick-prev{
-    padding: 0 14px;
   }
   &.slick-next{
-    padding: 0 17px;
   }
 }
 

@@ -16,19 +16,33 @@ $(window).on({
         checkFooterHeight();
     }
 });
+
 if ($.fn.slick) {
-    // $('.header__slider-el').slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     dots: true,
-    //     arrows: true,
-    //     prevArrow: $('.header__slider .slick-prev'),
-    //     nextArrow: $('.header__slider .slick-next'),
-    //     appendDots: $('.header__sliderDots')
-    //     // autoplay: true,
-    //     // autoplaySpeed: 3000,
-    //     // adaptiveHeight: true,
-    // });
+    $('.slider-inner-el').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: $('.slider-inner .slick-prev'),
+        nextArrow: $('.slider-inner .slick-next'),
+        // appendDots: $('.header__sliderDots')
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        // adaptiveHeight: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    dots: true,
+                    adaptiveHeight: true,
+                    variableWidth: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
 }
 
 if($.fn.selectpicker){

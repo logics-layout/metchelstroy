@@ -1,17 +1,89 @@
 extends main
 
+include ../components/item/item
+
 block head
     - var headData = {title: "Главная"}
     - var breadcrumb = true
+    - var callback = true
     - var index = 'header_index'
-    //link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
 block content
+    br
+    br
     .container
+        h2 Продажа квартир и помещений
+        br
+        .listItem
+            - for(var i = 0; i<5; i++)
+                .listItem__section
+                    +item(i, true)
+
+        br.hidden-sm-down
+        br
+        h2 Объекты на карте Челябинска
+        br
+    #yamap-contacts
+
+    .callback.text-center
+        .container
+            p.callback__title Хотите задать вопросы? Заполните форму и мы перезвоним!
+            .callback__form
+                .row
+                    .col-sm-6
+                        .form-group
+                            input.form-control.form-control_not-inset(placeholder="Телефон")
+                    .col-sm-6
+                        .form-group
+                            button.btn.btn-cream.btn-width.ttu.btn-input Отправить
+    br
+    br
+    .container
+        p.h2 О компании-застройщике Метчелстрой
+        +img('content/index')
+        br
+        br
+        .row
+            .col-md-6
+                p В Челябинске есть немало компаний застройщиков новых домов. Однако ООО «МетЧелСтрой» выгодно выделяется среди остальных застройщиков действующих в Металлургическом районе – прекрасном и благоустроенном месте, идеально подходящем для комфортного проживания.
+                p Наша компания застройщик образовалась в Челябинске весной 2000 года. Коллектив сформировался из опытных специалистов, отлично разбирающихся в строительстве жилых сооружений. Мы стали предлагать уютные квартиры от застройщика в Челябинске по весьма выгодной цене, чем сразу привлекли внимание клиентов.
+            .col-md-6
+                p Кроме домов этой серии предприятием построены Металлургический филиал АКБ «Челиндбанк», 3 пары шестнадцатиэтажных жилых домов по ул. Прокатная из железобетонных конструкций Свердловского ДСК, кирпичный каркасно-монолитный жилой дом по ул. Мира.
+                p Обратившись в ООО «МетЧелСтрой», можно приобрести комфортную квартиру от застройщика в Челябинске по вполне доступной цене. Такое жилье является выгодным вложением денежных средств.
+        br
+        +img('content/Sber')
+
+        br
+        br
+        br
+        h2 Фотогалерея наших объектов
+        br
+
+    div(style="overflow: hidden;")
+        .container
+            .slider-inner
+                button.slick-arrow.slick-prev: i.s-arrow-prev
+                .slider-inner-el
+                    .slider-inner__section
+                        +img('content/slider/1')
+                        button.slick-arrow.slick-next: i.s-arrow-next
+                    .slider-inner__section
+                        +img('content/slider/2')
+                        button.slick-arrow.slick-next: i.s-arrow-next
+                    .slider-inner__section
+                        +img('content/slider/3')
+                        button.slick-arrow.slick-next: i.s-arrow-next
+                    .slider-inner__section
+                        +img('content/slider/4')
+                        button.slick-arrow.slick-next: i.s-arrow-next
+        br.hidden-sm-down
+        br
 
 
 
 block script
-    //script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+    script(type="text/javascript" src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
     //script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
 
 

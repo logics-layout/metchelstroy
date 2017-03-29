@@ -1,5 +1,5 @@
 mixin header(data)
-    .header.not-styleLink
+    .header.not-styleLink(class!=data)
         .header-top.hidden-md-down
             .container
                 .header-top__sections
@@ -20,37 +20,67 @@ mixin header(data)
                             a(href="#").icon-title
                                 .icon-title-el.text-center: i.s-mail
                                 .icon-title-title: span metchelstroy@mail.ru
-        .header-bottom
-            .container
-                .hidden-lg-up
-                    .row
-                        .col-xs-5
-                            .mobile-list-anim.mobile-list-anim_menu
-                                input(type="checkbox", id="header-bottom-toggleMenuMbl").mobile-list-anim__input
-                                label.menuTopMobel(for="header-bottom-toggleMenuMbl")
-                                    span.menu-mobile
-                                        span.menu-mobile-hamburger.one
-                                        span.menu-mobile-hamburger.two
-                                        span.menu-mobile-hamburger.three
-                                    span.menu-text Меню
-                        .col-xs-7.text-right
-                            a(href='tel:+73517352372').header__phone-mobile +7 (351) 735-23-72
+        .header-bottom-main
+            .header-bottom
+                .container
+                    .hidden-lg-up
+                        .row
+                            .col-xs-5
+                                .mobile-list-anim.mobile-list-anim_menu
+                                    input(type="checkbox", id="header-bottom-toggleMenuMbl").mobile-list-anim__input
+                                    label.menuTopMobel(for="header-bottom-toggleMenuMbl")
+                                        span.menu-mobile
+                                            span.menu-mobile-hamburger.one
+                                            span.menu-mobile-hamburger.two
+                                            span.menu-mobile-hamburger.three
+                                        span.menu-text Меню
+                            .col-xs-7.text-right
+                                a(href='tel:+73517352372').header__phone-mobile +7 (351) 735-23-72
 
-                .header__nav(data-for="header-bottom-toggleMenuMbl")
-                    .container
-                        ul
-                            li: a(href="#").color-white: span.color-white__title О компании
-                            li: a(href="#").color-white: span.color-white__title Пресса
-                            li: a(href="#").color-white: span.color-white__title о нас
-                            li: a(href="#").color-white: span.color-white__title Наши объекты
-                            li: a(href="#").color-white: span.color-white__title Фотогалерея
-                            li: a(href="#").color-white: span.color-white__title Вопрос-ответ
-                            li: a(href="#").color-white: span.color-white__title Контакты
-                        .header__nav-blockViewFix.hidden-lg-down
-                            button(data-toggle="modal" data-target="#callback").btn.btn-green.ttu Заказать звонок
+                    .header__nav(data-for="header-bottom-toggleMenuMbl")
+                        .container
+                            ul
+                                li: a(href="#").color-white: span.color-white__title О компании
+                                li: a(href="#").color-white: span.color-white__title Пресса
+                                li: a(href="#").color-white: span.color-white__title о нас
+                                li: a(href="#").color-white: span.color-white__title Наши объекты
+                                li: a(href="#").color-white: span.color-white__title Фотогалерея
+                                li: a(href="#").color-white: span.color-white__title Вопрос-ответ
+                                li: a(href="#").color-white: span.color-white__title Контакты
+                            .header__nav-blockViewFix.hidden-lg-down
+                                button(data-toggle="modal" data-target="#callback").btn.btn-green.ttu Заказать звонок
 
 
+        - if(data)
+            .header-banner
+                .container
+                    .text-center
+                        p.header__title.color-black Продажа готовых и строящихся квартир&nbsp;
+                            br.hidden-md-down
+                            |от застройщика в Челябинске
+                        p.header__desc Приобретите комфортную квартиру от застройщика в Челябинске по вполне доступной цене.&nbsp;
+                            br.hidden-md-down
+                            | Качественная и уютная жилплощадь, выгодное вложение ваших денежных средств.
 
+                        .advantages
+                            .advantages__item
+                                .advantages__item-icon: i.s-advantages-1
+                                .advantages__item-title Большой опыт работы
+                                    br
+                                    b с 2000 года.
+                            .advantages__item
+                                .advantages__item-icon: i.s-advantages-2
+                                .advantages__item-title Все новостройки сдаются
+                                    br
+                                    b точно в срок
+                            .advantages__item
+                                .advantages__item-icon: i.s-advantages-3
+                                .advantages__item-title
+                                    b Безупречная репутация
+                                    br
+                                    | среди застройщиков
+                                    br
+                                    | Челябинска
 
 
 

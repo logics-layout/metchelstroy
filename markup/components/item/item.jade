@@ -1,4 +1,4 @@
-mixin item(num)
+mixin item(num, label)
     - num = num || 0;
     - var rowItem = {}
     - if(item.list[num])
@@ -10,6 +10,10 @@ mixin item(num)
         span.db.item__img
             span.db.item__price= rowItem.price
             +img(rowItem.img)
+
+            - if(label && rowItem.label)
+                span.db.item__label(class!=rowItem.label.colorClass): span= rowItem.label.title
+
         span.db.item__content
             span.item__title= rowItem.title
             span.db.item__desc: i= rowItem.desc

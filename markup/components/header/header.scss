@@ -1,4 +1,28 @@
 .header{
+  &_index{
+    background-size: cover;
+    background-position: center;
+    background-image: url('%=static=%assets/header/bg.jpg');
+  }
+  &-banner{
+    padding-top: 80px;
+    padding-bottom: 102px;
+  }
+  &__title{
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 55px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  &__desc{
+    color: #4a4746;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 35px;
+    margin: 0;
+    margin-bottom: 75px;
+  }
   &-top{
     padding-top: 18px;
     padding-bottom: 14px;
