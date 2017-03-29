@@ -26,6 +26,33 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .listItem{
+    margin: -15px;
+    &__section{
+      padding: 15px;
+    }
+  }
+  .item{
+    &__title{
+      font-size: 17px;
+    }
+    &__desc{
+      font-size: 12px;
+    }
+    &__btn-map{
+      font-size: 12px;
+    }
+    &__price{
+      font-size: 14px;
+      padding: 9px 10px;
+      &:after{
+        border-top-width: 32px;
+      }
+      &:before{
+        border-bottom-width: 32px;
+      }
+    }
+  }
   html, body {
     font-size: 15px;
     line-height: 25px;
@@ -136,6 +163,11 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .listItem{
+    &__section{
+      width: 50%;
+    }
+  }
 
   .callback {
     padding-bottom: 30px;
@@ -182,6 +214,19 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .listItem{
+    &__section{
+      width: 100%;
+    }
+  }
+  .item {
+    &__btn-map {
+      &:before {
+        margin-right: 7px;
+      }
+    }
+  }
+
   .callback {
     .form-control{
       text-align: center;

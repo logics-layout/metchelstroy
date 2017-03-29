@@ -1,0 +1,16 @@
+mixin item(num)
+    - num = num || 0;
+    - var rowItem = {}
+    - if(item.list[num])
+        - rowItem = item.list[num]
+    - else
+        - rowItem = item.list[0]
+
+    a(href="#").item.not-styleLink
+        span.db.item__img
+            span.db.item__price= rowItem.price
+            +img(rowItem.img)
+        span.db.item__content
+            span.item__title= rowItem.title
+            span.db.item__desc: i= rowItem.desc
+            button.db.item__btn-map: span Смотреть на карте
