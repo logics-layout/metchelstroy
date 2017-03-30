@@ -403,6 +403,21 @@ body {
       }
     }
   }
+  &__tabs{
+    &-nav{
+      @include nl;
+      li{
+        display: block;
+      }
+    }
+    &-content{
+      &-item{
+        &:not(.active){
+          display: none;
+        }
+      }
+    }
+  }
   &__floors-list{
     display: inline-block;
     width: 159px;
@@ -428,6 +443,7 @@ body {
       background-position: center;
       background-image: url("%=static=%content/floor.png");
       cursor: pointer;
+      display: block;
       &:hover{
         background-color: #d1c5ad;
       }
@@ -441,7 +457,7 @@ body {
 
 .objects{
   position: relative;
-  #yamap-contacts{
+  #yamap-objects{
     height: 706px;
   }
   &__content{

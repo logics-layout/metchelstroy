@@ -85,7 +85,7 @@ block content
                 a(href="#").objects__item
                     span.objects__item-icon: +img('content/objects/5', 'png')
                     span.objects__item-title: span Фитнес
-        #yamap-contacts
+        #yamap-objects
 
     .container
         br
@@ -189,7 +189,17 @@ block content
         br
         .row
             .col-md-8.text-center
-                +img('content/plan')
+                .plan__tabs-content
+                    .plan__tabs-content-item.active#plan__tabs1
+                        +img('content/plan')
+                    .plan__tabs-content-item#plan__tabs2
+                        p 22
+                        +img('content/plan')
+                    .plan__tabs-content-item#plan__tabs3
+                        p 33
+                        +img('content/plan')
+
+                br
 
             .col-md-4
                 .text-center
@@ -202,7 +212,14 @@ block content
                         button.plan__floors-arrow.slick-bottom: i.s-arrow-bottom
                     br
                     br
-                    .plan__floors-list
+
+                    ul.plan__tabs-nav.not-styleLink
+                        li.active: a(href="#plan__tabs1"): +img('content/floor/1', 'png')
+                        li: a(href="#plan__tabs2"): +img('content/floor/2', 'png')
+                        li: a(href="#plan__tabs3"): +img('content/floor/3', 'png')
+
+
+                    //.plan__floors-list
                         .plan__floors-list-sections
                             .plan__floors-list-sections-section
                                 .plan__floors-list-item.active(data-floor='10')

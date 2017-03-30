@@ -48,7 +48,7 @@ if ($.fn.slick) {
         slidesToScroll: 1,
         dots: false,
         infinite: false,
-        fade: true,
+        // fade: true,
         arrows: true,
         vertical: true,
         prevArrow: $('.plan__floors .slick-top'),
@@ -108,10 +108,30 @@ if ($.fn.magnificPopup) {
 }
 
 function initYmaps() {
-    var coords = [52.32594308927015, 104.2421168088913];
-    var MapPlaces = new ymaps.Map('yamap-contacts', {
-        center: coords,
-        zoom: 12,
+    // var coords = [52.32594308927015, 104.2421168088913];
+    // var MapPlaces = new ymaps.Map('yamap-contacts', {
+    //     center: coords,
+    //     zoom: 12,
+    //     controls: ['zoomControl']
+    // });
+    // MapPlaces.behaviors.disable('scrollZoom');
+    //
+    // collection = new ymaps.GeoObjectCollection(null,{
+    //     iconLayout: 'default#image',
+    //     iconImageHref: 'placemark.png',
+    //     iconImageSize: [39, 57],
+    //     // iconImageOffset: [-31, -83]
+    // });
+    //
+    // MapPlaces.geoObjects.add(collection);
+    //
+    // placemark = new ymaps.Placemark(coords);
+    // collection.add(placemark);
+
+
+    MapPlaces = new ymaps.Map('yamap-objects', {
+        center: [52.32594308927020, 104.2421168088913],
+        zoom: 10,
         controls: ['zoomControl']
     });
     MapPlaces.behaviors.disable('scrollZoom');
@@ -122,14 +142,51 @@ function initYmaps() {
         iconImageSize: [39, 57],
         // iconImageOffset: [-31, -83]
     });
-
     MapPlaces.geoObjects.add(collection);
 
-    placemark = new ymaps.Placemark(coords);
-    collection.add(placemark);
+    collection.add(new ymaps.Placemark([52.32594308927015, 104.2421168088913],{}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'placemark.png',
+        iconImageSize: [39, 57],
+    }));
+    collection.add(new ymaps.Placemark([52.42594408927020, 104.2421168088913],{}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'placemark2.png',
+        iconImageSize: [56, 67],
+    }));
+    collection.add(new ymaps.Placemark([52.22594408927020, 104.2421168088913],{}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'placemark3.png',
+        iconImageSize: [56, 67],
+    }));
+    collection.add(new ymaps.Placemark([52.12594408927020, 104.2421168088913],{}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'placemark4.png',
+        iconImageSize: [56, 67],
+    }));
+    collection.add(new ymaps.Placemark([52.12534408927020, 104.2421168088913],{}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'placemark5.png',
+        iconImageSize: [56, 67],
+    }));
+
 }
 
 try{
     ymaps.ready(initYmaps);
 }catch (e){}
 
+$('.plan__tabs-nav').find('a').click(function(e) {
+    var _this, block, parent, time;
+    e.preventDefault();
+    _this = $(this);
+    block = $(_this.attr('href'));
+    time = 300;
+    parent = _this.parent();
+    if (block[0]) {
+        $('.plan__tabs-content-item').not(block).fadeOut(time);
+        block.delay(time).fadeIn(300);
+        parent.addClass('active');
+        return parent.siblings().removeClass('active');
+    }
+});
