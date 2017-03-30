@@ -82,7 +82,7 @@ body {
   }
 }
 
-#yamap-contacts{
+#yamap-contacts, #yamap-objects{
   height: 612px;
   width: 100%;
   margin-bottom: -30px;
@@ -507,7 +507,37 @@ body {
   }
 }
 
-
+.linkTop{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: $mainColor;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 13px;
+  font-size: 13px;
+  line-height: normal;
+  opacity: 0;
+  visibility: hidden;
+  margin-bottom: -20px;
+  @include tr;
+  &.active{
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 0;
+  }
+  &:before{
+    content: '';
+    @include triangle('up', #fff, 15px);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  &:hover{
+    margin-bottom: 10px;
+  }
+}
 
 
 
