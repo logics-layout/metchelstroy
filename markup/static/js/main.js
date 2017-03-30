@@ -43,6 +43,21 @@ if ($.fn.slick) {
             },
         ]
     });
+    $('.plan__floors-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: false,
+        fade: true,
+        arrows: true,
+        vertical: true,
+        prevArrow: $('.plan__floors .slick-top'),
+        nextArrow: $('.plan__floors .slick-bottom'),
+        // appendDots: $('.header__sliderDots')
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        // adaptiveHeight: true,
+    });
 }
 
 if($.fn.selectpicker){

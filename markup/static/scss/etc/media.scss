@@ -57,6 +57,66 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .objects {
+    &__content {
+      margin: 0;
+      width: auto;
+      position: static;
+      padding: 25px;
+    }
+    &__item {
+      display: inline-block;
+      > * {
+        display: inline-block;
+      }
+    }
+    #yamap-contacts{
+      height: 500px;
+    }
+  }
+  .inner-banner__title {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .inner-banner {
+    &__table {
+      display: block;
+      &-cell {
+        display: block;
+        &-img{
+          display: block;
+        }
+        &_img{
+          width: 100%;
+          background: none;
+        }
+        +*{
+          padding-left: 0;
+          padding-top: 29px;
+        }
+      }
+    }
+    &__section {
+      padding: 25px 25px;
+    }
+    &__conditions {
+      text-align: center;
+      &-item {
+        vertical-align: top;
+        >*{
+          display: block;
+          margin: 0 auto;
+          +*{
+            padding-left: 0px;
+            padding-top: 20px;
+          }
+        }
+        &-title{
+        }
+      }
+    }
+  }
+
   .slider-inner {
     .slick-arrow {
       display: none !important;
@@ -221,6 +281,46 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .inner-banner__title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .callback-phone-text {
+    line-height: 27px;
+    font-size: 17px;
+    &__link {
+      font-size: 31px;
+    }
+  }
+  .text-big {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .inner-banner {
+    &__table {
+      &-absoluteBlock {
+        left: -10px;
+        padding: 5px 0;
+        >*{
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__label {
+      width: 70px;
+      height: 70px;
+      font-size: 9px;
+      line-height: 12px;
+      &_green{
+        &_ribs{
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+
   .header {
     &-banner {
       padding-top: 45px;
@@ -310,6 +410,10 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .inner-banner__title {
+    font-size: 24px;
+    line-height: 33px;
+  }
   .item {
     &__img {
       .item__label {

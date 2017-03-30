@@ -168,6 +168,16 @@ body {
     top: 50%;
     margin-top: -43.7px;
     z-index: 2;
+    @include btn-clear;
+    width: 87px;
+    height: 87px;
+    line-height: 87px;
+    background-color: $mainColor;
+    border-radius: 50%;
+    @include tr;
+    &:hover{
+      background-color: darken($mainColor, 10%);
+    }
     &.slick-prev{
       right: 100%;
       margin-right: 45px;
@@ -179,13 +189,307 @@ body {
   }
 }
 
+.inner-banner{
+  background-position: center;
+  background-size: cover;
+  background-image: url('%=static=%content/inner-banner_bg.jpg');
+  padding: 10px 0;
+  padding-bottom: 30px;
+  &__title{
+    color: #2f2d2d;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 66px;
+    margin: 0;
+    margin-bottom: 35px;
+  }
+  .breadcrumb{
+    margin-bottom: 10px;
+  }
+  &__table{
+    display: table;
+    width: 100%;
+    &-cell{
+      display: table-cell;
+      vertical-align: top;
+      &-img{
+        display: none;
+        width: 100%;
+        border-radius: 5px;
+      }
+      &_img{
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+        width: 654px;
+      }
+      +*{
+        padding-left: 37px;
+      }
+    }
+    &-absoluteBlock{
+      position: absolute;
+      left: -28px;
+      top: 0;
+      padding: 10px 0;
+      >*{
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+    }
+  }
+  &__label{
+    display: table;
+    width: 90px;
+    height: 90px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    >span{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    &_orange{
+      color: #fff;
+      background-color: #e89300;
+    }
+    &_green{
+      background-color: #61b112;
+      &_ribs{
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        background-size: 100%;
+        background-position: center;
+        background-image: url('%=static=%content/banner__label_green.png');
+        margin-left: -4px;
+      }
+    }
+  }
+  &__section{
+    border: 5px solid #eb1b4b;
+    border-radius: 6px;
+    padding: 45px 53px;
+    min-height: 100%;
+    color: rgba(59, 54, 54, 0.8);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    &-link{
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
+      display: block;
+      margin-bottom: 18px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__link{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    color: #2f2d2d;
+    >span{
+      color: #827777;
+      border-bottom: 1px solid rgba(130, 119, 119, 0.3);
+    }
+    &:hover{
+      >span{
+        border-bottom-color: rgba(130, 119, 119, 0.6);
+      }
+    }
+  }
+  &__conditions{
+    font-size: 0;
+    margin: -20px -43px;
+    &-item{
+      display: inline-block;
+      padding: 20px 43px;
+      font-size: 0;
+      white-space: nowrap;
+      >*{
+        display: inline-block;
+        vertical-align: middle;
+        white-space: normal;
+        +*{
+          padding-left: 29px;
+        }
+      }
+      &-icon{
+        width: 86px;
+        height: 86px;
+        background-color: #eb1b4b;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 86px;
+        img{
+          display: inline-block;
+        }
+      }
+      &-title{
+        @include opacity(0.8);
+        color: black;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+  }
+}
 
+.callback-phone-text{
+  line-height: 45px;
+  color: #20201e;
+  font-size: 24px;
+  font-weight: 300;
+  p{
+    margin-bottom: 6px;
+  }
+  &__link{
+    display: inline-block;
+    color: #e31948;
+    font-size: 34px;
+    line-height: normal;
+    >span{
+      border-bottom: 1px solid transparent;
+    }
+    &:hover{
+      >span{
+        border-bottom-color: rgba(227, 25, 72, 0.6);
+      }
+    }
+  }
+}
 
+.plan{
+  &__floors{
+    width: 219px;
+    height: 219px;
+    background-color: #e31948;
+    border-radius: 50%;
+    font-size: 37px;
+    font-weight: 100;
+    line-height: 34px;
+    color: #fff;
+    padding: 10px 0;
+    display: inline-block;
+    &-slider{
+      margin: 21px 0;
+    }
+    .slick-arrow {
+      @include btn-clear;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      @include tr;
+      &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      &.slick-prev {
 
+      }
+      &.slick-next {
 
+      }
+    }
+  }
+  &__floors-list{
+    display: inline-block;
+    width: 159px;
+    margin: -5px 0;
+    &-sections{
+      margin: 5px -2.5px;
+      font-size: 0;
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      &-section{
+        float: left;
+        padding: 0 2.5px;
+        width: 50%;
+      }
+    }
+    &-item{
+      height: 14px;
+      background-color: #e0d4bc;
+      background-size: cover;
+      background-position: center;
+      background-image: url("%=static=%content/floor.png");
+      cursor: pointer;
+      &:hover{
+        background-color: #d1c5ad;
+      }
+      &.active{
+        cursor: default;
+        background-color: $mainColor;
+      }
+    }
+  }
+}
 
-
-
+.objects{
+  position: relative;
+  #yamap-contacts{
+    height: 706px;
+  }
+  &__content{
+    background-color: #fff;
+    padding: 31px 34px;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    width: 312px;
+    margin-left: 80px;
+    margin-top: 145px;
+  }
+  &__list{
+    margin: -10px -20px;
+  }
+  &__item{
+    display: table;
+    color: #5d5a59;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 0;
+    white-space: nowrap;
+    >*{
+      display: table-cell;
+      vertical-align: middle;
+      white-space: normal;
+      +*{
+        padding-left: 22px;
+      }
+    }
+    &-icon{}
+    &-title{
+      font-size: 16px;
+      >span{
+        border-bottom: 1px dotted #5d5a59;
+      }
+    }
+    &:hover{
+      .objects__item-title{
+        >span{
+          border-bottom-style: solid;
+        }
+      }
+    }
+  }
+}
 
 
 
