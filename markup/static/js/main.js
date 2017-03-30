@@ -22,9 +22,15 @@ $(window).on({
         }else{
             linkTop.removeClass('active');
         }
+
     },
     resize: function () {
         checkFooterHeight();
+        var widthDoc = $(document).width();
+        if(widthDoc >= 991){
+            fixHeader(false);
+            window.offsetTopH = offsetTopHeaderBottom();
+        }
     }
 });
 

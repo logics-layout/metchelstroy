@@ -34,11 +34,15 @@ $(document).click(function(e) {
     }
 });
 
-var offsetTopH = $('.header-bottom').offset().top,
-    header = $('.header');
+function offsetTopHeaderBottom(){
+    return $('.header-bottom').offset().top;
+}
 
-function fixHeader() {
-    if($(window).scrollTop() >= offsetTopH){
+var header = $('.header');
+window.offsetTopH = offsetTopHeaderBottom();
+
+function fixHeader(bool) {
+    if(bool !== false && $(window).scrollTop() >= offsetTopH){
         header.addClass('fix');
     }else{
         header.removeClass('fix');

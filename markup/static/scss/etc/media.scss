@@ -200,6 +200,8 @@ body, html{
       background: #1f1c20;
       padding: 15px 0;
       display: none;
+      max-height: 82vh;
+      overflow: auto;
       ul{
         margin: 0;
         display: block;
